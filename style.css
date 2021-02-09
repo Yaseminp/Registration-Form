@@ -1,0 +1,140 @@
+:root{
+    --text-color: #828282;
+    --border-color: #e0e0e0;
+    --primary-color: #2f80ed;
+}
+
+* {
+    box-sizing: border-box;
+    font: inherit;
+    color: inherit;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", "sans-serif";
+    color: #222;
+    height: 100vh;
+    background-color: lightgrey;
+}
+
+p {
+    max-width: 600px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+
+}
+
+#container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    height: 100%;
+    align-items: center;
+}
+
+.logo-container {
+    grid-column: 1/5;
+    display: flex;
+    justify-content: center;
+}
+
+.panel-container {
+    grid-column: 6/12;
+}
+
+.panel {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px;
+}
+
+.panel_heading {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.panel_subheading {
+    margin: 0;
+    font-size: 12px;
+    color: var(--text-color);
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.input {
+    margin-bottom: 20px;
+}
+
+.input label {
+    font-size: 12px;
+    color: var(--text-color);
+    display: block;
+}
+
+.date-of-birth_heading {
+    font-size: 12px;
+    color: var(--text-color);
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.dropdown label {
+    font-size: 12px;
+    color: var(--text-color);
+    display: block;
+}
+
+.dropdown select{
+    width: 100%;
+    border: 1px solid var(--border-color);
+    height: 28px;
+    padding: 0;
+}
+
+.date-of-birth_input{
+    display: grid;
+    grid-template-columns: 2fr 1fr 5fr;
+    gap: 20px;
+}
+
+button{
+    display: block;
+    margin: 0 auto;
+    border: none;
+    padding: 10px 24px;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo-container{
+       display: none;
+    }
+    .panel-container {
+        grid-column: 1 / span 12;
+    }
+    .panel {
+        height: 90vh;
+        border-radius: 8px;
+    }
+   
+}
+
+
+     
+   
+    
+
+    
